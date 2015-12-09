@@ -1,0 +1,50 @@
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org" lang="en" ng-app='ng-spring-app'>
+    <head>
+        <meta charset="utf-8" />
+        <title>Spring Angular Template</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <!-- custom -->
+        <link rel="stylesheet" th:href="@{/static/css/bundle.css}"/>
+        <link rel="stylesheet" th:href="@{/css/app.css}"/>
+        <link rel="stylesheet" th:href="@{/css/bootstrap.css}"/>
+        <link rel="stylesheet" th:href="@{/css/font-awesome/css/font-awesome.min.css}" />
+
+        <script th:inline="javascript">
+            var contextPath = /*[[${#httpServletRequest.contextPath}]]*/ '';
+        </script>
+    </head>
+    <body>
+        <div >
+                <!-- top menu -->
+                <div ng-controller="HomeCtrl" ng-if="isloggedIn">
+
+                    <nav class="navbar navbar-default" ng-show="!showSearch">
+                        <div class="container-fluid">
+                            <div class="navbar-header">
+                                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-2">
+                                    <span class="sr-only">Toggle navigation</span>
+                                    <span class="icon-bar"></span>
+                                    <span class="icon-bar"></span>
+                                    <span class="icon-bar"></span>
+                                </button>
+                                <a class="navbar-brand" href="#">Test Client</a>
+                            </div>
+
+                            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-2">
+
+                                <ul class="nav navbar-nav navbar-right">
+                                    <li><a href="" ng-click="logout()"><i class="fa fa-sign-out"></i></a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </nav>
+                </div>
+                <div ui-view="" ng-cloak="" class="container"></div> 
+        </div>
+        <script th:src="@{/static/js/angular-bundle.js}"></script>
+        <script th:src="@{/static/js/extra-bundle.js}"></script>
+        <script th:src="@{/js/bootstrap.min.js}"></script>
+        <script th:src="@{/static/js/app-bundle.js}"></script>
+    </body>
+</html>
