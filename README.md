@@ -25,12 +25,12 @@ NODE.JS : https://nodejs.org/en/download/
 
 <h4>Building</h4>
 
-execute the build.bat file which will setup node+bower+gulp along with required files. after the setup run the following commands for 
-js building, minifying and deploying to static folder under web-app folder.
+execute the build.bat file which will setup node+bower+gulp along with required files. 
+After the setup run the following commands for js building, minifying and deploying to static folder under web-app folder.
 
-run "gulp" on parent folder and "gulp deploy" after the execution make sure that the minified file under web-app/static folder.
+run "gulp" on parent folder and "gulp deploy", after the execution make sure that the minified file under web-app/static folder.
 
-after build the UI run the maven commands.
+after building the UI run the maven commands.
 
 "mvn clean install"
 
