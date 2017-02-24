@@ -28,12 +28,18 @@ NODE.JS : https://nodejs.org/en/download/
 execute the build.bat file which will setup node+bower+gulp along with required files. 
 After the setup run the following commands for js building, minifying and deploying to static folder under web-app folder.
 
-run "gulp" on parent folder and "gulp deploy", after the execution make sure that the minified file under web-app/static folder.
+```
+$> gulp
+$> gulp deploy
+```
+after the execution make sure that the minified file under web-app/static folder.
 
 after building the UI run the maven commands.
 
-"mvn clean install"
+```
+$> mvn clean install
 
+```
 <h4>Deploy</h4>
 
 deploy the "spring-angular-template.war" on tomcat/wildfly server and access the following url
